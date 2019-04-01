@@ -1,5 +1,5 @@
 # Mutlilevel-Queue-Scheduling
-Question Description:-
+Project Description:-
 
 Write a program for multilevel queue scheduling algorithm. 
 There must be three queues generated.
