@@ -168,7 +168,7 @@ void roundrobin(struct scheduling a[],int pro){
 int main()
 {
 	int n,i;
-	struct scheduling x[100];
+	struct scheduling x[100],y[100];
 	printf("Note:\n1-The CPU should never be idle.\n2-The first round robin is of 4 seconds.\n3-Between the processes there is a round robin of 10 seconds.\n\n");
 	printf("Enter total number of process:");
 	scanf("%d",&n);
@@ -186,6 +186,33 @@ int main()
 		//p[i]=i+1;
 	}
 	
+	printf("Highest prioirty queue-(0-3)\n");
+	printf("Medium proiority queue-(4-6)\n");
+	printf("Lowest priority queue-(7-9)\n\n");
+	printf("Processes assigned to different queues are:\n\n");
+	for(i=0;i<n;i++)
+	{
+		if(x[i].pr==0 || x[i].pr==1 || x[i].pr==2 || x[i].pr==3)
+		{
+			printf("Queue 1 has process- P[%d]\n",i);
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		if(x[i].pr==4 || x[i].pr==5 || x[i].pr==6)
+		{
+			printf("Queue 2 has process- P[%d]\n",i);
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		if(x[i].pr==7 || x[i].pr==8 || x[i].pr==9)
+		{    
+			printf("Queue 3 has process- P[%d]\n",i);
+		}
+	}
+	
+	
 	
 	
 
@@ -199,7 +226,7 @@ int main()
 	sleep(10);
 	
 	fcfs(x,n);
-
+	
 	
 	
 	return(0);
